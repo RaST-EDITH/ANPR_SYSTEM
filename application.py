@@ -1,7 +1,7 @@
 import streamlit as st
 import json
 import cv2
-from ultralytics import YOLOv10
+from ultralytics import YOLO
 import numpy as np
 import math
 import re
@@ -81,7 +81,7 @@ if uploaded_file:
     cap = cv2.VideoCapture(file_path) if uploaded_file.type == "video/mp4" else None
     
     # Initialize the YOLOv10 Model with device selection
-    model = YOLOv10("weights/best.pt")
+    model = YOLO("weights/best.pt")
 
     # Class Names
     className = ["License"]
