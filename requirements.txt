@@ -2,3 +2,4 @@ huggingface-hub
 paddleocr
 paddlepaddle
 db-sqlite3
+opencv-python-headless
