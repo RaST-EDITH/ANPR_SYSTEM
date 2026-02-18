@@ -95,7 +95,8 @@ tornado==6.4.2
 tqdm==4.67.1
 typing_extensions==4.12.2
 tzdata==2025.1
--e git+https://github.com/THU-MIG/yolov10.git@453c6e38a51e9d1d5a2aa5fb7f1014a711913397#egg=ultralytics
 urllib3==2.3.0
 watchdog==6.0.0
 zipp==3.21.0
+ultralytics
+easyocr
