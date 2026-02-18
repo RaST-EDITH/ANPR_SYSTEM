@@ -89,13 +89,13 @@ termcolor==2.5.0
 thop==0.1.1.post2209072238
 tifffile==2024.8.30
 toml==0.10.2
-torch==2.6.0
-torchvision==0.21.0
+torch==2.5.1
+torchvision==0.20.1
 tornado==6.4.2
 tqdm==4.67.1
 typing_extensions==4.12.2
 tzdata==2025.1
--e git+https://github.com/THU-MIG/yolov10.git@453c6e38a51e9d1d5a2aa5fb7f1014a711913397#egg=ultralytics
+git+https://github.com/THU-MIG/yolov10.git@453c6e38a51e9d1d5a2aa5fb7f1014a711913397#egg=ultralytics
 urllib3==2.3.0
 watchdog==6.0.0
 zipp==3.21.0

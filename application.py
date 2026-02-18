@@ -1,7 +1,7 @@
 import streamlit as st
 import json
 import cv2
-from ultralytics import YOLO
+from ultralytics import YOLOv10
 import numpy as np
 import math
 import re
@@ -11,6 +11,13 @@ from datetime import datetime
 from paddleocr import PaddleOCR
 import format_mapper
 import time
+
+import torch
+import torch.serialization
+from ultralytics.nn.tasks import YOLOv10DetectionModel
+
+# Fix for PyTorch 2.6 weights_only default change
+torch.serialization.add_safe_globals([YOLOv10DetectionModel])
 
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 
@@ -81,7 +88,7 @@ if uploaded_file:
     cap = cv2.VideoCapture(file_path) if uploaded_file.type == "video/mp4" else None
     
     # Initialize the YOLOv10 Model with device selection
-    model = YOLO("weights/best.pt")
+    model = YOLOv10("weights/best.pt")
 
     # Class Names
     className = ["License"]
